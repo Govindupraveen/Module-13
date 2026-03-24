@@ -1,43 +1,57 @@
-# Exp.No:33  
-## POSTFIX EVALUATION
+Exp.No-31
 
----
+IMPLEMENTATION OF STACK
 
-### AIM  
-To write a Python program to evaluate a user-given Postfix expression that contains Multiplication and Addition operators using the stack concept.
+AIM:
 
----
+To write a Python program to implement a stack using a list and its built-in methods (append(), pop()).
 
-### ALGORITHM
+ALGORITHM:
 
-1. **Start the program.**
-2. Define a set named `OPERATORS` containing all the valid operators: `*, +, **, -, /, %`.
-3. Define a function `evaluate_postfix(exp)` to evaluate the postfix expression:
-   - Inside the function, create an empty list called `stack` to store operands and intermediate results.
-4. Loop through each item in the given postfix expression:
-   - If the current item is **not in OPERATORS**, it is an operand, so append it to the stack.
-   - If the current item is an **operator**:
-     - Pop the top two elements from the stack (first pop is `a`, second pop is `b`).
-     - Perform the operation `b <operator> a` depending on the current operator.
-     - Store the result in a variable called `result`.
-     - Append the result back to the stack.
-5. After the loop ends, return the first element of the stack as the final evaluation result.
-6. Take a postfix expression as input from the user.
-7. Print the postfix expression.
-8. Call the function `evaluate_postfix()` with the input and print the result.
-9. **End the program.**
+Start the program.
 
----
+Define a class st with the following methods:
 
-### PROGRAM
+push(self, num): Adds the number num to the stack.
+
+pop(self): Removes and returns the top element from the stack.
+
+Create a stack object s using the class st.
+
+Input the stack size: Take an integer input size to define the size of the stack.
+
+Loop through numbers from 1 to size: Add only the odd numbers to the stack using the push() method.
+
+Display the elements in the stack after the loop completes.
+
+Call pop() to remove the top element from the stack and display the popped element.
+
+Display the stack again to show the remaining elements.
+
+End the program.
+
+PROGRAM
+```
+stack = []
+for i in range(5):
+    a=input()
+    stack.append(a)
+
+print('Stack before elements are popped')
+print(stack)
+
+for i in range(2):
+    stack.pop()
+
+
+print('\nStack after elements are popped:')
+print(stack)
 
 ```
+OUTPUT
+![image](https://github.com/user-attachments/assets/35203373-578c-4dc9-8790-f5fd341e5c59)
 
 
-```
+RESULT:
 
-### OUTPUT
-
-
-### RESULT
-
+Thus the python program was initiated and executed successfully.
